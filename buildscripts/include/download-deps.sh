@@ -14,6 +14,9 @@ if [ ! -d mbedtls ]; then
 		tar -xz -C mbedtls --strip-components=1
 fi
 
+# ovvc
+[ ! -d ovvc ] && git clone https://github.com/3EMS2/OpenVVC ovvc && ( cd ovvc; git checkout 3ems2 )
+
 # dav1d
 [ ! -d dav1d ] && git clone https://code.videolan.org/videolan/dav1d.git
 
