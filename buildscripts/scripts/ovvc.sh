@@ -24,7 +24,9 @@ cpu=armv7-a
 cpuflags=
 [[ "$ndk_triple" == "arm"* ]] && cpuflags="$cpuflags -mfpu=neon -mcpu=cortex-a8"
 
-../configure  --host=$ndk_triple --enable-arm-asm
+[[ "$ndk_triple" == "aarch64"* ]] && confflags="--enable-arm-simde --enable-arm-asm " || confflags="--disable-arm-simde --disable-arm-asm "
+
+../configure  --host=$ndk_triple $confflags
 
 make -j$cores
 
