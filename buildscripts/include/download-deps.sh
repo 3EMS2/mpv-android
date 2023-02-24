@@ -21,10 +21,7 @@ fi
 [ ! -d dav1d ] && git clone https://code.videolan.org/videolan/dav1d.git
 
 # ffmpeg
-if [ ! -d ffmpeg ]; then
-	git clone https://github.com/FFmpeg/FFmpeg ffmpeg
-	[ $TRAVIS -eq 1 ] && ( cd ffmpeg; git checkout $v_travis_ffmpeg )
-fi
+[ ! -d ffmpeg ] && git clone -b 3ems2 https://github.com/3EMS2/FFmpeg ffmpeg
 
 # freetype2
 [ ! -d freetype2 ] && git clone git://git.sv.nongnu.org/freetype/freetype2.git -b VER-$v_freetype

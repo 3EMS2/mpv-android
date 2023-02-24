@@ -21,7 +21,8 @@ v_mbedtls=2.28.2
 
 dep_mbedtls=()
 dep_dav1d=()
-dep_ffmpeg=(mbedtls dav1d)
+dep_ovvc=()
+dep_ffmpeg=(mbedtls dav1d ovvc)
 dep_freetype2=()
 dep_fribidi=()
 dep_harfbuzz=()
