@@ -14,6 +14,13 @@ if [ ! -d mbedtls ]; then
 		tar -xz -C mbedtls --strip-components=1
 fi
 
+# libxml2
+if [ ! -d xml2 ]; then
+	mkdir xml2
+	$WGET https://download.gnome.org/sources/libxml2/2.10/libxml2-2.10.3.tar.xz -O - | \
+		tar -xJ -C xml2 --strip-components=1
+fi
+
 # ovvc
 [ ! -d ovvc ] && git clone -b 3ems2 https://github.com/3EMS2/OpenVVC ovvc
 
