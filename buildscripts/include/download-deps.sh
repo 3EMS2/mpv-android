@@ -15,7 +15,7 @@ if [ ! -d mbedtls ]; then
 fi
 
 # ovvc
-[ ! -d ovvc ] && git clone https://github.com/3EMS2/OpenVVC ovvc && ( cd ovvc; git checkout 3ems2 )
+[ ! -d ovvc ] && git clone -b 3ems2 https://github.com/3EMS2/OpenVVC ovvc
 
 # dav1d
 [ ! -d dav1d ] && git clone https://code.videolan.org/videolan/dav1d.git
